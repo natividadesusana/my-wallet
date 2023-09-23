@@ -7,7 +7,6 @@ import AddTransactionsPage from "./pages/AddTransactionPage";
 import EditTransactionsPage from "./pages/EditTransactionPage";
 import AuthContext from "./contexts/AuthContext";
 import { useState } from "react";
-import { mainColor } from "./constants/colors";
 
 export default function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
@@ -31,7 +30,6 @@ export default function App() {
 }
 
 const PagesContainer = styled.main`
-  background-color: ${mainColor};
   width: calc(100vw - 50px);
   max-height: 100vh;
   padding: 25px;

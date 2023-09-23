@@ -8,8 +8,15 @@ import TransactionItem from "../../components/TransactionItem/TransactionItem";
 import { Oval } from "react-loader-spinner";
 import { useGetTransactions } from "../../services/transactions";
 import { useNavigate } from "react-router-dom";
-import { HomeContainer, Header, TransactionsContainer, ListContainer, Value, ButtonsContainer } from "./styled";
-import { mainColor, mainColorLight } from "../../constants/colors";
+import {
+  HomeContainer,
+  Header,
+  TransactionsContainer,
+  ListContainer,
+  Value,
+  ButtonsContainer,
+} from "./styled";
+import { mainColorLight } from "../../constants/colors";
 
 export default function HomePage() {
   const { userName } = useContext(AuthContext);
@@ -36,9 +43,7 @@ export default function HomePage() {
       </Header>
 
       <TransactionsContainer>
-        {!transactions && (
-          <Oval color={mainColor} secondaryColor={mainColorLight} />
-        )}
+        {!transactions && <Oval secondaryColor={mainColorLight} />}
         {transactions && transactions.length === 0 && (
           <>Não há registros de entrada ou saída</>
         )}

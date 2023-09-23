@@ -1,5 +1,11 @@
 import styled from "styled-components";
-import { mainContrastColor, negativeColor, positiveColor, textPrimaryColor, textSecondaryColor } from "../../constants/colors";
+import {
+  mainContrastColor,
+  negativeColor,
+  positiveColor,
+  textPrimaryColor,
+  textSecondaryColor,
+} from "../../constants/colors";
 
 export const HomeContainer = styled.div`
   display: flex;
